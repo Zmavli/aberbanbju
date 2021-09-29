@@ -49,7 +49,6 @@ jobs:
       - name: Commit changes to gh-pages
         run: |
           rm -f .gitignore
-          echo "node_modules" > .gitignore
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
           git checkout -b tmp/gh-pages
