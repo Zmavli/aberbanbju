@@ -23,5 +23,9 @@ warning-policy = "error"
 command="mdbook-regex-replacer"
 
 [[preprocessor.regex-replacer.items]]
-regex="``gloss\n(?P<content>(?s:.)*?)\n``"
+regex="<gloss>(?P<content>(?s:.)*?)</gloss>"
 rep="<div data-gloss>\n\n${content}\n</div>"
+
+[[preprocessor.regex-replacer.items]]
+regex="<spoiler>(\r?\n)+(?P<title>(?s:.)*?)(\r?\n){2,}(?P<content>(?s:.)*?)</spoiler>"
+rep="<details><summary>\n\n${title}\n</summary><div>\n\n${content}\n</div></details>"
