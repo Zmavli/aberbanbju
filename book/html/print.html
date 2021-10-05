@@ -1,0 +1,599 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>aberbanbju</title>
+                <meta name="robots" content="noindex" />
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="favicon.svg">
+                        <link rel="shortcut icon" href="favicon.png">
+                <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+                <link rel="stylesheet" href="css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+                <link rel="stylesheet" href="res/leipzig.min.css">
+                <link rel="stylesheet" href="res/style.css">
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="part-0/intro.html">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Basic sentences</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="part-1/phonology.html"><strong aria-hidden="true">1.1.</strong> Phonology</a></li><li class="chapter-item expanded "><a href="part-1/names-and-borrowings.html"><strong aria-hidden="true">1.2.</strong> Names and borrowings</a></li><li class="chapter-item expanded "><a href="part-1/reading-word-definitions.html"><strong aria-hidden="true">1.3.</strong> Reading word definitions</a></li><li class="chapter-item expanded "><a href="part-1/copular-sentences-and-logical-translation.html"><strong aria-hidden="true">1.4.</strong> Copular sentences and logical translation</a></li></ol></li><li class="chapter-item expanded "><a href="questions.html">Questions</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">aberbanbju</h1>
+
+                    <div class="right-buttons">
+                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- 0 -->
+<!-- (intro -- describe book, describe eberban) -->
+<div style="font-variant: small-caps; text-align: center">
+<h1 id="the-eberban-language-for-the-home-learner"><a class="header" href="#the-eberban-language-for-the-home-learner">The Eberban Language for the Home Learner</a></h1>
+<blockquote>
+<p><em>A Textbook for a Logical Language,</em><br />
+<em>Furnished Richly with Examples and Exercises,</em><br />
+<em>Teaching the Novel Grammar of Eberban</em><br />
+<em>From the Familiar and Traditional Structures</em><br />
+<em>of Natural Language pedagogy.</em></p>
+<p>— ekinibju eberban</p>
+</blockquote>
+</div>
+<p>This book was written by <em>Zmavli Caimle</em>, and reviewed by the creator of
+Eberban, <em>mia entropy</em>, who also provided typesetting help.</p>
+<p><strong>This book is a work in progress, and the text may change drastically and
+suddenly, either due to rewriting or changes in the language itself.</strong></p>
+<p>Future topics (subject to change). (N) lessons introduce new grammar, while
+those without the tag do not introduce any new grammar at all (but may use
+existing structures in ways not previously shown). (N*) lessons introduce a
+small amount of new grammar that greatly parallels or reuse previously covered
+structures.</p>
+<!--
+
+TODO : Move all of this into SUMMARY.md
+
+Part 0.0
+- (this very page)
+- introduction
+- resources
+
+Part 1.0
+- phonology
+- (N) names, borrowings, and za
+- (N) basic place definition reading
+- (N) basic sentence formation and personal pronouns with MI
+- translations into logical notation
+- (N) illocutionary particles and sentence delimiters
+
+Part 2.0
+- (N) switch predicates and SE
+- (N) accessing third and fourth places with ZE/FE
+- content clauses with P0 places
+
+Part 2.1
+- nonstandard word order with ZE/FE
+- relative clauses with ZE/FE
+
+Part 2.2
+- pleasantries
+- possessives with blae
+- agency with gza
+- quotes with CE, CA and CO
+
+Part 3.0
+- (N) advanced place definitions
+- (N*) content clauses with P1 places
+- (N*) content clauses with P2 places
+
+Part 3.1
+- evidentials 
+- reciprocity with sare
+- universal quantification with tun
+
+Part 3.2
+- (N) definitions
+- (N*) questions
+
+Part 4.0
+- (N) basic numbers
+- mathematical operations
+
+Part 5.0
+- (N) list syntax
+- list operators -->
+<div style="break-before: page; page-break-before: always;"></div><!-- 0 -->
+<h1 id="phonology"><a class="header" href="#phonology">Phonology</a></h1>
+<p>The phonology of Eberban is described in greater detail in <a href="part-1/">the official grammar
+book</a>. If technical explanations and IPA are desired, refer to it instead. This
+book will provide a layman's explanation.</p>
+<p>Assuming that the reader is a native English speaker, all letters are spoken the
+same way as their English counterparts, but with a several exceptions. For
+vowels:</p>
+<ul>
+<li><strong>a</strong> is spoken like in &quot;f<strong>a</strong>ther&quot;, never like in &quot;comm<strong>a</strong>&quot;.</li>
+<li><strong>o</strong> is spoken like in &quot;l<strong>o</strong>rd&quot;, never like in &quot;b<strong>oo</strong>t&quot;.</li>
+<li><strong>e</strong> is spoken like in &quot;b<strong>e</strong>t&quot;, never like in &quot;b<strong>ee</strong>t&quot;.</li>
+<li></li>
+</ul>
+<p>Note that the English words used may not necessarily correspond with the
+canonical or correct pronunciation depending on your accent -- for those, refer
+to the official book. For consonants:</p>
+<ul>
+<li><strong>c</strong> is the &quot;sh&quot; in &quot;<strong>sh</strong>ell&quot;.</li>
+<li>The sound for <strong>j</strong> does not exist in English proper, but it's the &quot;ge&quot; in
+&quot;lu<strong>ge</strong>&quot; or the <strong>g</strong> in &quot;bour<strong>g</strong>eois&quot;. It's the voiced equivalent of the
+previous letter, <strong>c</strong>.</li>
+<li><strong>tc</strong> is the &quot;ch&quot; in &quot;<strong>ch</strong>ime&quot;.</li>
+<li><strong>dj</strong> is the &quot;j&quot; in &quot;<strong>j</strong>am&quot;.</li>
+<li></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><!-- 0 -->
+<h1 id="names-and-borrowings"><a class="header" href="#names-and-borrowings">Names and borrowings</a></h1>
+<blockquote>
+<p>“Perhaps it's impossible to wear an identity without becoming what you pretend
+to be.”</p>
+<p>— ender's game orson scott card</p>
+</blockquote>
+<p>In many language courses, the first lesson teaches how one introduces one's
+self. This book will do something similar. This lesson will cover how names are
+used in Eberban, as well as the process by which foreign words are borrowed into
+it.</p>
+<p>Suppose that one wants to name one's self <strong>dzu</strong> (magenta). If one merely says
+<strong>dzu</strong>:</p>
+<div data-gloss>
+<p>dzu</p>
+<p>dzu</p>
+<p>{(E-Xd) is magenta}</p>
+<p>An entity is colored magenta.</p>
+</div>
+<p>One asserts that &quot;something is magenta&quot;. That is not what one wants. The exact
+processes of the grammar will be covered in future chapters. </p>
+<blockquote>
+<p>For now, pay no attention to <code>(E-Xd)</code> -- simply take it to be single parameter
+which can accept arguments.</p>
+</blockquote>
+<p>What one wants is to say the name &quot;Magenta&quot;, not &quot;Something is magenta.&quot; To do
+this, one ought to use the particle <strong>za</strong> (of the particle family <strong>ZI</strong>).</p>
+<blockquote>
+<p>From now on, the classes (or parts of speech) that particles belong to will be
+shown in parentheses. Particles of the same class have the same (or very
+similar) grammar and are used in similar places. The name of particle class
+are named by the type specimen of the class in capital letters for historical
+reasons.</p>
+</blockquote>
+<blockquote>
+<p>Note for Lojban and Toaq readers: It should be noted that &quot;place structure&quot; in
+Eberban is different from the way Lojban and Toaq handle places. This is
+covered in more detail in <a href="part-1/">tba</a>.</p>
+</blockquote>
+<p>The particle <strong>za</strong> has the following grammar:</p>
+<blockquote>
+<p><strong>za</strong> : (E-Xd) is named :</p>
+</blockquote>
+<p>What one want, then, is <strong>za dzu</strong>. </p>
+<div data-gloss>
+<p>za dzu</p>
+<p>za dzu</p>
+<p>{(E-Xd) is named :} {Magenta}.</p>
+<p>An entity that is named &quot;Magenta&quot;.</p>
+</div>
+<p>What if one wants to use a non-Eberbanic name? Suppose one's name is &quot;Anna
+Livingstone&quot;. How does one say that in Eberban? First, one should transliterate
+the name, obeying Eberban borrowing morphology rules. A simplified explanation
+is given for now.</p>
+<blockquote>
+<p>Borrowings must start with <strong>u</strong>. For words that already start with <strong>u</strong>, add
+a boundary marker, making the start of the word <strong>u'u</strong>. Borrowings must end
+with either a vowel or <strong>n</strong>, <strong>r</strong> or <strong>l</strong>. Borrowings must use only Eberban
+sounds.</p>
+</blockquote>
+<p>In this case, the transliteration is <strong>ana livinsto</strong>. In Eberban, non-native
+words (borrowings) must be prefixed with <strong>u</strong>, making the borrowing <strong>u'ana
+ulivinsto</strong>. Borrowings which are adjacent to one another are treated as being
+part of the same borrowing. Therefore, <strong>u'ana ulivinsto</strong> means &quot;Anna
+Livingstone&quot; rather than &quot;Anna&quot; and &quot;Livingstone&quot;. While there is a mechanism
+for the separation of borrowings, it is covered in a later chapter.</p>
+<div data-gloss>
+<p>uana ulivinsto</p>
+<p>{uana ulivinsto}</p>
+<p>{(E-Xd) is an Anna Livingstone.}</p>
+<p>An entity which is an Anna Livingstone.</p>
+</div>
+<p>That is not yet what one wants. All borrowings have the place structure <code>(E-Xd) is a/some &quot;borrowing(s)&quot;</code>. If one wants to refer to someone <em>named</em> Anna
+Livingstone, one will have to use <strong>za</strong> again.</p>
+<div data-gloss>
+<p>za uana ulivinsto</p>
+<p>za {uana ulivinsto}</p>
+<p>{(E-Xd) is an entity named:} {Anna Livingstone}.</p>
+<p>An entity which is named Anna Livingstone.</p>
+</div>
+<p>One should transliterate your name or moniker into Eberban, or select words from
+the dictionary to form one's name, if desired.</p>
+<p>It should be noted that any foreign word can be borrowed, not just names.</p>
+<div data-gloss>
+<p>ubanbu</p>
+<p>ubanbu</p>
+<p>{(E-Xd) is bamboo.}</p>
+<p>An entity which is bamboo.</p>
+</div>
+<div data-gloss>
+<p>umakaroni</p>
+<p>umakaroni</p>
+<p>{(E-Xd) is macaroni.}</p>
+<p>An entity which is macaroni.</p>
+</div>
+<h3 id="exercise-021-english-to-eberban-transliteration"><a class="header" href="#exercise-021-english-to-eberban-transliteration">Exercise 02.1: English to Eberban Transliteration</a></h3>
+<p><em>No mastery will come without work. To learn truly, follow the exercises.</em></p>
+<p>Transliterate the following English words into Eberban.</p>
+<details><summary>
+<p>Paris</p>
+</summary><div>
+<p>Preferably, <strong>upari</strong>. However, <strong>uparisi</strong> is also acceptable.</p>
+</div></details>
+<details><summary>
+<p>New York</p>
+</summary><div>
+<p><strong>uniu uior</strong>. &quot;York&quot; may also be <strong>uiorko</strong>.</p>
+</div></details>
+<details><summary>
+<p>Raymond Davis</p>
+</summary><div>
+<p>Preferably, <strong>ureimon udeivisi</strong>. &quot;Raymond&quot; may also be <strong>ureimondo</strong>, and &quot;Davis&quot; <strong>udeivi</strong>, but that sounds like &quot;Davy&quot;.</p>
+</div></details>
+<details><summary>
+<p>abalone</p>
+</summary><div>
+<p><strong>uabalon</strong>.</p>
+</div></details>
+<details><summary>
+<p>baseball</p>
+</summary><div>
+<p>Preferably, <strong>ubeisbo</strong>. However, <strong>ubeisbolo</strong> is also acceptable.</p>
+</div></details>
+<p>Transliteration is more art than science -- so long as it resembles the original pronunciation and obeys morphological rules, it is correct. The answers are merely the canonical transliterations.</p>
+<h3 id="exercise-022-eberban-to-english-transliteration"><a class="header" href="#exercise-022-eberban-to-english-transliteration">Exercise 02.2: Eberban to English Transliteration</a></h3>
+<details><summary>
+<p>udiana usmiti</p>
+</summary><div>
+<p>Diana Smith</p>
+</div></details>
+<details><summary>
+<p>ufiladelfia</p>
+</summary><div>
+<p>Philadelphia</p>
+</div></details>
+<details><summary>
+<p>utciskeiki</p>
+</summary><div>
+<p>cheesecake</p>
+</div></details>
+<details><summary>
+<p>uroberte u'urton</p>
+</summary><div>
+<p>Robert Urton</p>
+</div></details>
+<details><summary>
+<p>uhaibiskusi</p>
+</summary><div>
+<p>hibiscus</p>
+</div></details>
+<blockquote>
+<p>The reason why particle families are written with capital letters is because Eberban is descended from Lojban. Lojban writes particle families in such a manner, and that is how Eberban does it as well.</p>
+</blockquote>
+<h3 id="extra-credit-full-borrowing-morphology-rules"><a class="header" href="#extra-credit-full-borrowing-morphology-rules">Extra credit: full borrowing morphology rules</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reading-word-definitions"><a class="header" href="#reading-word-definitions">Reading word definitions</a></h1>
+<p>Let us consider transitive verbs and prepositions in English, specifically the
+word <strong>go</strong>. This word is a transitive verb, meaning that it takes a subject and
+an object.</p>
+<blockquote>
+<p>I go there.</p>
+<p>SUBJ-1PS go OBJ-there</p>
+</blockquote>
+<p>One may generalize this and define <strong>go</strong> as such:</p>
+<blockquote>
+<p>go: x1 goes to x2</p>
+</blockquote>
+<p>This is the manner by which Eberban's vocabulary is defined. Each predicate has
+one to four parameters which can be &quot;filled&quot; by arguments. Let us look at the
+definition of an Eberban word, usually called a predicate. </p>
+<blockquote>
+<p><strong>fuir</strong> : (E-Xd) knows fact [A-P0] from source (O-Xd).</p>
+</blockquote>
+<p>What do the letters and numbers in the parentheticals mean? The first component
+is a letter -- E, A, O or U, corresponding to the first, second, third, and
+fourth places of the predicate respectively. The second component refers to the
+type of argument the parameter accepts.</p>
+<ul>
+<li><strong>X</strong> parameters refer to concretes -- specific entities or an events. We
+shall focus on X parameters exclusively for now.</li>
+<li><strong>P</strong> parameters refer to propositions -- a particular abstract concept,
+property, or relation. These are covered in <a href="part-1/">P chapter</a></li>
+<li><strong>S</strong> parameters (not seen here) refer to sequences -- lists of X, P or S
+arguments. These are covered in <a href="part-1/">S chapter</a></li>
+<li><strong>N</strong> parameters refer to numbers. These are covered in <a href="part-1/">N chapter</a></li>
+</ul>
+<p>One does not need to worry about the third component as of now, but they will be
+listed here for completeness. The third component refers to the distributivity
+or collectivity of arguments for X parameters; the number of variables bound by
+the proposition in P parameters; or the type of arguments to be listed in S
+parameters.</p>
+<p>We will only cover predicates with X parameters from now until <a href="part-1/">P0 chapter</a>.
+However, reading predicate definitions should be learned now, even if the other
+three places will not be covered until later.</p>
+<blockquote>
+<p>&quot;filled&quot; is quite a misnomer as one will see in later chapters, but it
+suffices for now.</p>
+</blockquote>
+<blockquote>
+<p>Eberban is based on second order logic -- all root words are predicates.</p>
+</blockquote>
+<blockquote>
+<p>Do you know why the parameters are labeled such? Ans: it is Eberban's
+alphabetical order.</p>
+</blockquote>
+<h3 id="simple-definition-reading-exercise"><a class="header" href="#simple-definition-reading-exercise">Simple definition reading exercise</a></h3>
+<h3 id="extra-credit-complex-definition-reading-exercise"><a class="header" href="#extra-credit-complex-definition-reading-exercise">Extra credit: complex definition reading exercise</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="copular-sentences-and-logical-translation"><a class="header" href="#copular-sentences-and-logical-translation">Copular sentences and logical translation</a></h1>
+<p>In this chapter, one shall finally learn how to say something in Eberban. We
+shall consider only the simplest type of sentence here -- copular sentences. One
+will also learn personal pronouns of class MI. </p>
+<p>Copular sentences in English are of the form &quot;X is Y&quot;, such as &quot;This is an
+apple,&quot; or &quot;I am happy&quot;. </p>
+<p>Eberban does not have a copula particle like in English, being that it has no
+distinction between verbs, nouns and adjectives formally. Certain words are used
+very similarly to how verbs, nouns and adjectives are used in English, yes, but
+underneath, the grammar is all the same -- they are all predicates. Let us
+consider the sentence &quot;This is an apple&quot; again. One could define &quot;this&quot; and
+&quot;apple&quot; thusly:</p>
+<blockquote>
+<p>this: P is this.
+apple: P is an apple.</p>
+</blockquote>
+<p>And then construct the sentence like so:</p>
+<blockquote>
+<p><strong>this is an apple</strong></p>
+<ul>
+<li>P is this</li>
+<li>P is an apple</li>
+</ul>
+</blockquote>
+<p>One could actually break down virtually all English sentences like this. Here is
+another, more complex example.</p>
+<blockquote>
+<p><strong>I go to the market.</strong></p>
+<ul>
+<li>P is me (I)</li>
+<li>P goes to Q (go to)</li>
+<li>Q is the market. (the market)</li>
+</ul>
+</blockquote>
+<p>This is the core of Eberban grammar. All root words are predicates. To ensure
+that it will be understood, we will have an exercise in the middle of the
+lesson.</p>
+<h2 id="decomposition-of-english-sentences"><a class="header" href="#decomposition-of-english-sentences">Decomposition of English sentences</a></h2>
+<p>Decompose the following sentences into the Eberban predicate style, similar to
+what is shown above.</p>
+<details><summary>
+<p>I look at you.</p>
+</summary><div>
+<ul>
+<li>P is me (I)</li>
+<li>P looks at Q. (look at)</li>
+<li>Q is you. (you)</li>
+</ul>
+</div></details>
+<details><summary>
+<p>Someone eats an apple.</p>
+</summary><div>
+<ul>
+<li>P is someone. (someone)</li>
+<li>P eats Q. (eats)</li>
+<li>Q is an apple. (an apple)</li>
+</ul>
+</div></details>
+<details><summary>
+<p>I go from the mall to the office.</p>
+</summary><div>
+<ul>
+<li>P is me. (I)</li>
+<li>P goes from Q to R. (go from ... to ...)</li>
+<li>Q is the mall. (the mall)</li>
+<li>R is the office. (the office)</li>
+</ul>
+</div></details>
+<details><summary>
+<p>I am sad.</p>
+</summary><div>
+<ul>
+<li>P is me. (I)</li>
+<li>P is sad. (am sad)
+``</li>
+</ul>
+</div></details>
+<p>Eberban treats <strong>existential variables</strong> as &quot;first-class citizens&quot; -- they are
+the linchpin from which all other grammar derives. Given that Eberban is a
+logical language, it makes sense that sentences should be easy to translate into
+formal logic. Specifically, Eberban uses second-order logic. When one says <strong>mei
+menoe</strong>, one is actually saying</p>
+<div data-gloss>
+<p>mei menoe</p>
+<p>mei menoe</p>
+<p>{X is something near the speaker} {X is an apple}</p>
+<p>There exists X such that X is something near the speaker and X is an apple.</p>
+</div>
+<p>Reciprocally, when one says <strong>mei menoe</strong>, one is not only saying &quot;There is
+something near (the speaker) that is an apple,&quot; but also &quot;There is an apple that
+is near (the speaker)&quot;.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>“They were flinty, dull, with inscriptions depicting each of the five Ws of Journalism (What? What! What!? What. Why?).”</p>
+<p>“Messages are for the sender, not for the receiver.”<br />
+― Joseph Fink, <a href="https://www.goodreads.com/work/quotes/42677282">Welcome to Night Vale</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+                <script type="text/javascript" src="res/leipzig.min.js"></script>
+                <script type="text/javascript" src="res/leipzig_apply.js"></script>
+        
+                        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+                
+    </body>
+</html>

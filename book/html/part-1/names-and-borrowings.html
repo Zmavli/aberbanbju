@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Names and borrowings - aberbanbju</title>
+                
+
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
+        
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
+        
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+                <link rel="stylesheet" href="../res/leipzig.min.css">
+                <link rel="stylesheet" href="../res/style.css">
+        
+                <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../part-0/intro.html">Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Basic sentences</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../part-1/phonology.html"><strong aria-hidden="true">1.1.</strong> Phonology</a></li><li class="chapter-item expanded "><a href="../part-1/names-and-borrowings.html" class="active"><strong aria-hidden="true">1.2.</strong> Names and borrowings</a></li><li class="chapter-item expanded "><a href="../part-1/reading-word-definitions.html"><strong aria-hidden="true">1.3.</strong> Reading word definitions</a></li><li class="chapter-item expanded "><a href="../part-1/copular-sentences-and-logical-translation.html"><strong aria-hidden="true">1.4.</strong> Copular sentences and logical translation</a></li></ol></li><li class="chapter-item expanded "><a href="../questions.html">Questions</a></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                                            </div>
+
+                    <h1 class="menu-title">aberbanbju</h1>
+
+                    <div class="right-buttons">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                                                                        
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- 0 -->
+<h1 id="names-and-borrowings"><a class="header" href="#names-and-borrowings">Names and borrowings</a></h1>
+<blockquote>
+<p>“Perhaps it's impossible to wear an identity without becoming what you pretend
+to be.”</p>
+<p>— ender's game orson scott card</p>
+</blockquote>
+<p>In many language courses, the first lesson teaches how one introduces one's
+self. This book will do something similar. This lesson will cover how names are
+used in Eberban, as well as the process by which foreign words are borrowed into
+it.</p>
+<p>Suppose that one wants to name one's self <strong>dzu</strong> (magenta). If one merely says
+<strong>dzu</strong>:</p>
+<div data-gloss>
+<p>dzu</p>
+<p>dzu</p>
+<p>{(E-Xd) is magenta}</p>
+<p>An entity is colored magenta.</p>
+</div>
+<p>One asserts that &quot;something is magenta&quot;. That is not what one wants. The exact
+processes of the grammar will be covered in future chapters. </p>
+<blockquote>
+<p>For now, pay no attention to <code>(E-Xd)</code> -- simply take it to be single parameter
+which can accept arguments.</p>
+</blockquote>
+<p>What one wants is to say the name &quot;Magenta&quot;, not &quot;Something is magenta.&quot; To do
+this, one ought to use the particle <strong>za</strong> (of the particle family <strong>ZI</strong>).</p>
+<blockquote>
+<p>From now on, the classes (or parts of speech) that particles belong to will be
+shown in parentheses. Particles of the same class have the same (or very
+similar) grammar and are used in similar places. The name of particle class
+are named by the type specimen of the class in capital letters for historical
+reasons.</p>
+</blockquote>
+<blockquote>
+<p>Note for Lojban and Toaq readers: It should be noted that &quot;place structure&quot; in
+Eberban is different from the way Lojban and Toaq handle places. This is
+covered in more detail in <a href="">tba</a>.</p>
+</blockquote>
+<p>The particle <strong>za</strong> has the following grammar:</p>
+<blockquote>
+<p><strong>za</strong> : (E-Xd) is named :</p>
+</blockquote>
+<p>What one want, then, is <strong>za dzu</strong>. </p>
+<div data-gloss>
+<p>za dzu</p>
+<p>za dzu</p>
+<p>{(E-Xd) is named :} {Magenta}.</p>
+<p>An entity that is named &quot;Magenta&quot;.</p>
+</div>
+<p>What if one wants to use a non-Eberbanic name? Suppose one's name is &quot;Anna
+Livingstone&quot;. How does one say that in Eberban? First, one should transliterate
+the name, obeying Eberban borrowing morphology rules. A simplified explanation
+is given for now.</p>
+<blockquote>
+<p>Borrowings must start with <strong>u</strong>. For words that already start with <strong>u</strong>, add
+a boundary marker, making the start of the word <strong>u'u</strong>. Borrowings must end
+with either a vowel or <strong>n</strong>, <strong>r</strong> or <strong>l</strong>. Borrowings must use only Eberban
+sounds.</p>
+</blockquote>
+<p>In this case, the transliteration is <strong>ana livinsto</strong>. In Eberban, non-native
+words (borrowings) must be prefixed with <strong>u</strong>, making the borrowing <strong>u'ana
+ulivinsto</strong>. Borrowings which are adjacent to one another are treated as being
+part of the same borrowing. Therefore, <strong>u'ana ulivinsto</strong> means &quot;Anna
+Livingstone&quot; rather than &quot;Anna&quot; and &quot;Livingstone&quot;. While there is a mechanism
+for the separation of borrowings, it is covered in a later chapter.</p>
+<div data-gloss>
+<p>uana ulivinsto</p>
+<p>{uana ulivinsto}</p>
+<p>{(E-Xd) is an Anna Livingstone.}</p>
+<p>An entity which is an Anna Livingstone.</p>
+</div>
+<p>That is not yet what one wants. All borrowings have the place structure <code>(E-Xd) is a/some &quot;borrowing(s)&quot;</code>. If one wants to refer to someone <em>named</em> Anna
+Livingstone, one will have to use <strong>za</strong> again.</p>
+<div data-gloss>
+<p>za uana ulivinsto</p>
+<p>za {uana ulivinsto}</p>
+<p>{(E-Xd) is an entity named:} {Anna Livingstone}.</p>
+<p>An entity which is named Anna Livingstone.</p>
+</div>
+<p>One should transliterate your name or moniker into Eberban, or select words from
+the dictionary to form one's name, if desired.</p>
+<p>It should be noted that any foreign word can be borrowed, not just names.</p>
+<div data-gloss>
+<p>ubanbu</p>
+<p>ubanbu</p>
+<p>{(E-Xd) is bamboo.}</p>
+<p>An entity which is bamboo.</p>
+</div>
+<div data-gloss>
+<p>umakaroni</p>
+<p>umakaroni</p>
+<p>{(E-Xd) is macaroni.}</p>
+<p>An entity which is macaroni.</p>
+</div>
+<h3 id="exercise-021-english-to-eberban-transliteration"><a class="header" href="#exercise-021-english-to-eberban-transliteration">Exercise 02.1: English to Eberban Transliteration</a></h3>
+<p><em>No mastery will come without work. To learn truly, follow the exercises.</em></p>
+<p>Transliterate the following English words into Eberban.</p>
+<details><summary>
+<p>Paris</p>
+</summary><div>
+<p>Preferably, <strong>upari</strong>. However, <strong>uparisi</strong> is also acceptable.</p>
+</div></details>
+<details><summary>
+<p>New York</p>
+</summary><div>
+<p><strong>uniu uior</strong>. &quot;York&quot; may also be <strong>uiorko</strong>.</p>
+</div></details>
+<details><summary>
+<p>Raymond Davis</p>
+</summary><div>
+<p>Preferably, <strong>ureimon udeivisi</strong>. &quot;Raymond&quot; may also be <strong>ureimondo</strong>, and &quot;Davis&quot; <strong>udeivi</strong>, but that sounds like &quot;Davy&quot;.</p>
+</div></details>
+<details><summary>
+<p>abalone</p>
+</summary><div>
+<p><strong>uabalon</strong>.</p>
+</div></details>
+<details><summary>
+<p>baseball</p>
+</summary><div>
+<p>Preferably, <strong>ubeisbo</strong>. However, <strong>ubeisbolo</strong> is also acceptable.</p>
+</div></details>
+<p>Transliteration is more art than science -- so long as it resembles the original pronunciation and obeys morphological rules, it is correct. The answers are merely the canonical transliterations.</p>
+<h3 id="exercise-022-eberban-to-english-transliteration"><a class="header" href="#exercise-022-eberban-to-english-transliteration">Exercise 02.2: Eberban to English Transliteration</a></h3>
+<details><summary>
+<p>udiana usmiti</p>
+</summary><div>
+<p>Diana Smith</p>
+</div></details>
+<details><summary>
+<p>ufiladelfia</p>
+</summary><div>
+<p>Philadelphia</p>
+</div></details>
+<details><summary>
+<p>utciskeiki</p>
+</summary><div>
+<p>cheesecake</p>
+</div></details>
+<details><summary>
+<p>uroberte u'urton</p>
+</summary><div>
+<p>Robert Urton</p>
+</div></details>
+<details><summary>
+<p>uhaibiskusi</p>
+</summary><div>
+<p>hibiscus</p>
+</div></details>
+<blockquote>
+<p>The reason why particle families are written with capital letters is because Eberban is descended from Lojban. Lojban writes particle families in such a manner, and that is how Eberban does it as well.</p>
+</blockquote>
+<h3 id="extra-credit-full-borrowing-morphology-rules"><a class="header" href="#extra-credit-full-borrowing-morphology-rules">Extra credit: full borrowing morphology rules</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../part-1/phonology.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="../part-1/reading-word-definitions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../part-1/phonology.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a rel="next" href="../part-1/reading-word-definitions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+        
+                <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+        
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+                <script type="text/javascript" src="../res/leipzig.min.js"></script>
+                <script type="text/javascript" src="../res/leipzig_apply.js"></script>
+        
+        
+    </body>
+</html>
